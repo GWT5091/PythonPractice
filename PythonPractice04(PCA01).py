@@ -26,7 +26,12 @@ sns.heatmap(pca.components_,
            fmt='1.1f',
            xticklabels=df_1.columns,
            yticklabels=['1st','2st','3st','4st','5st','6st','7st','8st','9st','10st','11st','12st','13st'])
-#第2主成分と第2主成分
+#第1主成分と第2主成分
 df_pca['Airbus'] = df[4]
 fig , ax = plt.subplots(figsize=(12,8))
 df_pca.plot(kind='scatter', x='1st',y='2nd',s=100,c='Airbus',cmap='summer',alpha=1.0,ax=ax)
+
+#寄与率
+print(pca.explained_variance_ratio_)
+#因子
+print(pca.components_)
