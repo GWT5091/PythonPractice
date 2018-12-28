@@ -10,7 +10,7 @@ while True:
         print(name + 'の誕生日は未登録です')
         print('誕生日を入力してください：◯/◯')
         dbday = input()
-        if dbday.str.isdecimal():
+        if dbday.isdecimal():
             print('不正')
         else:
             birthdays[name] = dbday
